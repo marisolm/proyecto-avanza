@@ -1,6 +1,6 @@
-# 👜 Cueros Co. - E-commerce de Productos de Cuero
+#  AVANZA ONE. - E-commerce de Productos
 
-Este proyecto es una aplicación de comercio electrónico desarrollada con **React** y **Vite**. La tienda se especializa en artículos de cuero premium, como carteras, bolsos y billeteras, integrando **Firebase** como base de datos en tiempo real.
+Este proyecto es una aplicación de comercio electrónico desarrollada con **React** y **Vite**. La tienda se especializa en artículos de tecnología, integrando **Firebase** como base de datos en tiempo real.
 
 ## Tecnologias utilizadas
 
