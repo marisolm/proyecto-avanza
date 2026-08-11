@@ -3,12 +3,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAUmr_4EazOXTPm7x84gaKPU4mFU6BHZd4",
-  authDomain: "react-97175-a7f49.firebaseapp.com",
-  projectId: "react-97175-a7f49",
-  storageBucket: "react-97175-a7f49.firebasestorage.app",
-  messagingSenderId: "132189590132",
-  appId: "1:132189590132:web:5042a92f433ab9e96df721"
+  apiKey: "AIzaSyDRfk5U03SoyOmLPWadKel55UgJY8tuEvQ",
+  authDomain: "avanza-bbb04.firebaseapp.com",
+  projectId: "avanza-bbb04",
+  storageBucket: "avanza-bbb04.firebasestorage.app",
+  messagingSenderId: "715473872040",
+  appId: "1:715473872040:web:690b05d721239da7f50e9d"
 };
 
 // Initialize Firebase
