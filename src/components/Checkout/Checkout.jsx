@@ -38,22 +38,20 @@ const Checkout = () => {
             const orderRef = collection(db, "orders");
             const response = await addDoc(orderRef, order);
 
-            setOrderId(response.id);
-            updateStock();
+            await updateStock();
             deleteCart();
+            setOrderId(response.id);
 
         } catch (error) {
             console.error("Error al crear la orden: ", error);
         }
     };
 
-    const updateStock = () => {
-        cart.forEach((productCart) => {
+    const updateStock = async () => {
+        await Promise.all(cart.map((productCart) => {
             const productRef = doc(db, "products", productCart.id);
-            updateDoc(productRef, {stock: increment(-productCart.quantity)});
-            console.log(`Stock actual del producto ${productCart.name} actualizado: -${productCart.quantity}`);
-            console.log(`Stock actualizado para el producto ${productCart.name}`);
-        });
+            return updateDoc(productRef, {stock: increment(-productCart.quantity)});
+        }));
     };
 
     return (
