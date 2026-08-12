@@ -12,9 +12,9 @@ const NavBar = () => {
             </Link>
 
             <ul className="nav-list">
-                <NavLink className="nav-item" to="/category/carteras">Carteras</NavLink>
-                <NavLink className="nav-item" to="/category/bolsos">Bolsos</NavLink> 
-                <NavLink className="nav-item" to="/category/billeteras">Billeteras</NavLink>
+                <NavLink className="nav-item" to="/category/computadoras">Computadoras</NavLink>
+                <NavLink className="nav-item" to="/category/smartphones">Smartphones</NavLink> 
+                <NavLink className="nav-item" to="/category/otros">Otros</NavLink>
             </ul>
 
             <CartWidget />
