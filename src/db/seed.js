@@ -2,21 +2,21 @@ import db from "./db.js";
 import { addDoc, collection } from "firebase/firestore";
 
 const products = [
-    { 
-        id: 1, 
-        name: "Computadora 1", 
-        description: "Descripción de computadora 1", 
-        stock: 1, 
-        image: '/image/computadora1.jpg',
+    {
+        id: 1,
+        name: "Computadora 1",
+        description: "Descripción de computadora 1",
+        stock: 1,
+        images: ['/image/computadora1.jpg'],
         price: 150000,
         category: 'Computadoras'
     },
-    { 
-        id: 2, 
-        name: "Smartphone 1", 
-        description: "Descripción de smartphone 1", 
-        stock: 1, 
-        image: '/image/smartphone1.jpg',
+    {
+        id: 2,
+        name: "Smartphone 1",
+        description: "Descripción de smartphone 1",
+        stock: 1,
+        images: ['/image/smartphone1.jpg'],
         price: 50000,
         category: 'Smartphones'
     },

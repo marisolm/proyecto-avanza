@@ -8,8 +8,10 @@ import { Link } from "react-router";
 const ItemDetail = ({ product }) => {
     const { addProduct } = useContext(CartContext);
     const [itemAdded , setItemAdded] = useState(false);
+    const images = product.images?.length > 0 ? product.images : [product.image];
+    const [selectedImage, setSelectedImage] = useState(images[0]);
 
-    const addToCart = (count) => { 
+    const addToCart = (count) => {
         const newProduct = {...product, quantity:count};
         addProduct(newProduct);
         setItemAdded(true);
@@ -18,7 +20,24 @@ const ItemDetail = ({ product }) => {
     return (
         <div className="item-detail">
             <div className="detail-image-container">
-                <img className="detail-image" src={product.image} alt={product.name}/>
+                <div className="detail-image-main">
+                    <img className="detail-image" src={selectedImage} alt={product.name}/>
+                </div>
+                {
+                    images.length > 1 && (
+                        <div className="detail-thumbnails">
+                            {images.map((image, index) => (
+                                <img
+                                    key={index}
+                                    className={`detail-thumbnail ${image === selectedImage ? "detail-thumbnail-active" : ""}`}
+                                    src={image}
+                                    alt={`${product.name} ${index + 1}`}
+                                    onClick={() => setSelectedImage(image)}
+                                />
+                            ))}
+                        </div>
+                    )
+                }
             </div>
             <div className="detail-info-container">
                 <div>
